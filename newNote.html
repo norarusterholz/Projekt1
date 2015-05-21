@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <title>New Note</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/fonts.css">
 </head>
+
 <body>
-    <button>Speichern</button>
-    <button>Cancel</button>
+
+<form action="index.html">
+
+    <div class="createNote" id="noteTitle">
+        <label>Title
+    <input type="text" name="noteTitle">
+        </label>
+    </div>
+
+    <div class="createNote" id="noteDescription">
+        <label>Description
+    <textarea name="noteDescription">What do you need to do?</textarea>
+        </label>
+    </div>
+
+    <div class="createNote" id="starRating">
+        <label>Importance
+        <input type="radio" name="star" value="5">
+        <input type="radio" name="star" value="4">
+        <input type="radio" name="star" value="3">
+        <input type="radio" name="star" value="2">
+        <input type="radio" name="star" value="1">
+        </label>
+    </div>
+
+    <div class="createNote" id="finishDate">
+        <label>Finish date
+        <input type="date" name="finishDate">
+        </label>
+    </div>
+
+    <div class="createNote" id="saveButton">
+        <button>Save</button>
+        </div>
+
+    <div class="createNote" id="cancelButton">
+        <button>Cancel</button>
+    </div>
+
+</form>
+
 </body>
+
 </html>
