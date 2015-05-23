@@ -10,42 +10,50 @@
 <body>
 
 <form action="index.html">
-
+    <fieldset>
     <div class="createNote" id="noteTitle">
         <label>Title
-    <input type="text" name="noteTitle">
+    <input type="text" name="noteTitle" placeholder="Give your note a title">
         </label>
     </div>
+    </fieldset>
 
+    <fieldset>
     <div class="createNote" id="noteDescription">
         <label>Description
-    <textarea name="noteDescription">What do you need to do?</textarea>
+    <textarea name="noteDescription" placeholder="What do you need to do?"></textarea>
         </label>
     </div>
+    </fieldset>
 
+    <fieldset>
     <div class="createNote" id="starRating">
         <label>Importance
-        <input type="radio" name="star" value="5">
-        <input type="radio" name="star" value="4">
-        <input type="radio" name="star" value="3">
-        <input type="radio" name="star" value="2">
-        <input type="radio" name="star" value="1">
+        <input class="icon-star" type="radio" name="star" value="5">
+        <input class="icon-star" type="radio" name="star" value="4">
+        <input class="icon-star" type="radio" name="star" value="3">
+        <input class="icon-star" type="radio" name="star" value="2">
+        <input class="icon-star" type="radio" name="star" value="1">
         </label>
     </div>
+    </fieldset>
 
+    <fieldset>
     <div class="createNote" id="finishDate">
-        <label>Finish date
+        <label>Finish date</label>
         <input type="date" name="finishDate">
-        </label>
     </div>
+    </fieldset>
 
+    <fieldset>
     <div class="createNote" id="saveButton">
-        <button>Save</button>
+        <input type="submit" name="saveButton" value="Save">
         </div>
 
     <div class="createNote" id="cancelButton">
-        <button>Cancel</button>
+        <input type="button" name="cancelButton" value="Cancel">
     </div>
+    </fieldset>
 
 </form>
 

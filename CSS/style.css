@@ -11,3 +11,50 @@ html {
 
     box-sizing: inherit;    
 }
+
+body {
+    font-family: Helvetica Neue;
+    font-size: medium;
+}
+
+fieldset {
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 600px;
+    height: 200px;
+    float: right;
+    margin-right: 400px;
+    font-size: medium;
+}
+
+input {
+    box-sizing: border-box;
+    width: 600px;
+    float: right;
+    margin-right: 400px;
+    font-family: Helvetica Neue;
+    font-size: medium;
+}
+
+
+input[type="button"] {
+    width: 200px;
+    float: right;
+    margin-top: 10px;
+}
+
+
+.icon-star {
+    width: auto;
+    display: inline-block;
+    margin-right: 0px;
+    float: inherit;
+}
+
+#starRating > label {
+
+}
