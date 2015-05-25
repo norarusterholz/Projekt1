@@ -3,33 +3,48 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Projekt 1-Nora&Mimi</title>
-    <link rel="stylesheet" href="CSS/style.css">
+
+    <script src="js/notes.js"></script>
+
     <link rel="stylesheet" href="CSS/fonts.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
     <header>
         <button>
-            <a href="newNote.html" class="icon-new-message">
-                Create new Note
+            <a href="newNote.html" class="icon-new-message"></a>
+            <a href="newNote.html">
+                Create a new Note
             </a>
         </button>
-        <select name="" id="">
-            <option value="Block White Style">
-                Block White Style
-            </option>
-        </select>
-        <nav>
+
+        <nav class="clearfix">
             <a href="">By finish Date</a>
             <a href="">By created Date</a>
             <a href="">By Importance</a>
+            <a href="">Show finished</a>
+           
+            <div class="color-select-area">
+                <select name="" id=""> 
+                    <option value="1">
+                        Choose color...
+                    </option>
+                    <option value="2">
+                        White & Black
+                    </option>
+                    <option value="3">
+                        Pink & Grey
+                    </option>
+                </select>
+                <span class="icon-chevron-down"></span>
+            </div>
         </nav>
-        <button>
-            Show finished
-        </button>
     </header>
 
-    <div class="content">
-        
+    <div class="notes">
     </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>
