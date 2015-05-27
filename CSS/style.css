@@ -57,4 +57,9 @@ input[type="button"] {
 
 #starRating > label {
 
+    box-sizing: inherit;
+
+    font-family: "Open Sans";
+    font-size: 16px;
+    color: #333;
 }
