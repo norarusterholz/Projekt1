@@ -1,19 +1,5 @@
-html {
-    margin: 0;
-    padding: 0;
-
-    box-sizing: border-box; 
-}
-
-* {
-    margin: 0;
-    padding: 0;
-
-    box-sizing: inherit;    
-}
-
 body {
-    font-family: Helvetica Neue;
+    font-family: "Open Sans";
     font-size: medium;
 }
 
@@ -27,17 +13,20 @@ textarea {
     width: 600px;
     height: 200px;
     float: right;
-    margin-right: 400px;
+
     font-size: medium;
+
+    margin-right: 400px;
 }
 
 input {
-    box-sizing: border-box;
     width: 600px;
     float: right;
-    margin-right: 400px;
-    font-family: Helvetica Neue;
+
+    font-family: "Open Sans";
     font-size: medium;
+
+    margin-right: 400px;
 }
 
 
@@ -51,14 +40,12 @@ input[type="button"] {
 .icon-star {
     width: auto;
     display: inline-block;
-    margin-right: 0px;
     float: inherit;
+
+    margin-right: 0px;
 }
 
 #starRating > label {
-
-    box-sizing: inherit;
-
     font-family: "Open Sans";
     font-size: 16px;
     color: #333;
