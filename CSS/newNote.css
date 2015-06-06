@@ -1,20 +1,29 @@
 body {
     font-family: "Open Sans";
-    font-size: medium;
+    font-size: 18px;
+
+    max-width: 978px;
+
+    margin: 0 auto;
+    padding: 36px;
 }
+
 
 fieldset {
     border: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+
 
 textarea {
     width: 600px;
     height: 200px;
     float: right;
 
-    font-size: medium;
+    font-family: "Open Sans";
+    font-size: 18px;
 
     margin-right: 400px;
 }
@@ -24,29 +33,79 @@ input {
     float: right;
 
     font-family: "Open Sans";
-    font-size: medium;
+    font-size: 18px;
 
     margin-right: 400px;
-}
-
-
-input[type="button"] {
-    width: 200px;
-    float: right;
     margin-top: 10px;
 }
 
 
-.icon-star {
-    width: auto;
-    display: inline-block;
-    float: inherit;
-
-    margin-right: 0px;
+input[type="radio"] {
+    -webkit-appearance: none;
 }
 
-#starRating > label {
-    font-family: "Open Sans";
-    font-size: 16px;
-    color: #333;
+input[type="button"] {
+    height: 36px;
+    background-color: dimgray;
+
+    border: none;
+
+    box-shadow: 2px 6px 6px #555;
+
+    padding: 6px 18px;
+    margin-bottom: 12px;
+
+}
+
+#cancelButton {
+    width: 200px;
+}
+
+.rating {
+    float:left;
+
+}
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:150%;
+    line-height:1.2;
+    color:#dfdfdf;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked ~ label {
+    color: crimson;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: crimson;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: crimson;
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
 }

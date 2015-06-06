@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New Note</title>
+    <title>Create a new Note</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="CSS/fonts.css">
     <link rel="stylesheet" href="CSS/newNote.css">
@@ -10,53 +10,54 @@
 
 <body>
 
-<form action="index.html">
+
     <fieldset>
-    <div class="createNote" id="noteTitle">
+    <div>
         <label>Title
-    <input type="text" name="noteTitle" placeholder="Give your note a title">
+    <input type="text" id="title" placeholder="Give your note a title">
         </label>
     </div>
     </fieldset>
 
     <fieldset>
-    <div class="createNote" id="noteDescription">
+    <div>
         <label>Description
-    <textarea name="noteDescription" placeholder="What do you need to do?"></textarea>
+    <textarea id="description" placeholder="What do you need to do?"></textarea>
         </label>
     </div>
     </fieldset>
 
     <fieldset>
-    <div class="createNote" id="starRating">
-        <label>Importance
-        <input class="icon-star" type="radio" name="star" value="5">
-        <input class="icon-star" type="radio" name="star" value="4">
-        <input class="icon-star" type="radio" name="star" value="3">
-        <input class="icon-star" type="radio" name="star" value="2">
-        <input class="icon-star" type="radio" name="star" value="1">
+        <div class="rating">
+        <legend>Importance</legend>
+        <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Should be finished 5 days ago">5 stars</label>
+        <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Hurry!!!">4 stars</label>
+        <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Maybe I should start with that one">3 stars</label>
+        <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="There is still time">2 stars</label>
+        <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="I can do this when I'm old">1 star</label>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+    <div>
+        <label>Finish date
+        <input type="date" id="finishDate">
         </label>
     </div>
     </fieldset>
 
     <fieldset>
-    <div class="createNote" id="finishDate">
-        <label>Finish date</label>
-        <input type="date" name="finishDate">
-    </div>
-    </fieldset>
-
-    <fieldset>
-    <div class="createNote" id="saveButton">
-        <input type="submit" name="saveButton" value="Save">
+    <div>
+        <input type="button" id="saveButton" value="Save">
         </div>
 
-    <div class="createNote" id="cancelButton">
-        <input type="button" name="cancelButton" value="Cancel">
+    <div>
+        <input type="button" id="cancelButton" value="Cancel">
     </div>
     </fieldset>
 
-</form>
+<script src="js/newNote.js"></script>
 
 </body>
 
