@@ -20,9 +20,9 @@ document.getElementById("saveButton").onclick = function() {
     console.log(JSON.stringify(note));
 
     localStorage.setItem("notes", JSON.stringify(note));
-    location.href = "index.html";s
+    location.href = "notes.html";s
 };
 
 document.getElementById("cancelButton").onclick = function () {
-    location.href = "index.html";
+    location.href = "notes.html";
 };
