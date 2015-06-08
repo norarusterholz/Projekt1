@@ -20,7 +20,7 @@ document.getElementById("saveButton").onclick = function() {
     console.log(JSON.stringify(note));
 
     localStorage.setItem("notes", JSON.stringify(note));
-    location.href = "notes.html";s
+    location.href = "notes.html";
 };
 
 document.getElementById("cancelButton").onclick = function () {
