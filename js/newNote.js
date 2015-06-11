@@ -4,22 +4,21 @@ function starRating() {
             return document.getElementsByName('rating')[i].value;
         }
     }
-
 }
 
 document.getElementById("saveButton").onclick = function() {
+    var notes = JSON.parse(localStorage.getItem("notes")) || [];
+
     var note = {
         title: document.getElementById("title").value,
         description: document.getElementById("description").value,
         finishDate: document.getElementById("finishDate").value,
-        importance:  starRating()
-
+        importance: starRating()
     };
 
-    console.log(note);
-    console.log(JSON.stringify(note));
+    notes.push(note);
 
-    localStorage.setItem("notes", JSON.stringify(note));
+    localStorage.setItem("notes", JSON.stringify(notes));
     location.href = "notes.html";
 };
 
