@@ -43,7 +43,7 @@
 
     <div id="notes">
         <script id="entry-template" type="text/x-handlebars-template">
-            {{#each notes}}
+            {{#each this}}
                 <div class="note">
                     <div class="header">
                         <p class="date">{{finishDate}}</p>
@@ -61,7 +61,7 @@
                             <input type="checkbox">Finished
                         </span>
                         <textarea placeholder="Write a note..." class="content">
-                            {{content}}
+                            {{description}}
                         </textarea>
                         <button class="edit"><a>Edit</a></button>
                     </div>
