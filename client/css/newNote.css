@@ -42,6 +42,8 @@ input {
 
 input[type="radio"] {
     -webkit-appearance: none;
+	appearance: none;
+	-moz-appearance: none;
 }
 
 input[type="button"] {
