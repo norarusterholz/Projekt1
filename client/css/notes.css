@@ -9,7 +9,7 @@ header nav {
     margin-top: 12px;
 }
 
-header nav a {
+header nav span {
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
@@ -19,9 +19,14 @@ header nav a {
     font-family: "Playfair Display Bold";
 }
 
-header nav a:first-of-type,
-header nav a:first-child {
+header nav span:first-of-type,
+header nav span:first-child {
     border-left: 1px solid #ccc;
+}
+
+header nav span:hover {
+	color: crimson;
+	cursor: pointer;
 }
 
 header nav .color-select-area {
