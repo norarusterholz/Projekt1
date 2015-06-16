@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>notes</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>notes</title>
 
-    <link rel="stylesheet" href="CSS/fonts.css">
-    <link rel="stylesheet" href="CSS/resets.css">
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="stylesheet" href="CSS/notes.css">
-</head>
-<body>
-    <header>
-        <button>
-            <a href="newNote.html" class="icon-new-message"></a>
-            <a href="newNote.html">
-                Create a new Note
-            </a>
-        </button>
+        <link rel="stylesheet" href="CSS/fonts.css">
+        <link rel="stylesheet" href="CSS/resets.css">
+        <link rel="stylesheet" href="CSS/index.css">
+        <link rel="stylesheet" href="CSS/notes.css">
+    </head>
+    <body>
+        <header>
+            <button onclick="window.location.href='newNote.html'">
+                <span class="icon-new-message"></span>
+                    Create a new Note
+            </button>
 
-        <nav class="clearfix">
-            <span id="finishDateSort">By finish Date</span>
-			<span id="createdDateSort">By created Date</span>
-			<span id="importanceSort">By Importance</span>
-			<span id="finishedSort">Show finished</span>
-           
-            <div class="color-select-area">
-                <select name="" id=""> 
-                    <option value="1">
-                        Choose color...
-                    </option>
-                    <option value="2">
-                        White & Black
-                    </option>
-                    <option value="3">
-                        Pink & Grey
-                    </option>
-                </select>
-                <span class="icon-chevron-down"></span>
-            </div>
-        </nav>
-    </header>
-
-    <div id="notes">
-        <script id="entry-template" type="text/x-handlebars-template">
-            {{#each this}}
-                <div class="note">
-                    <div class="header">
-                        <p class="date">{{finishDate}}</p>
-                        <p class="title">{{title}}</p>
-                        <p class="importance">
-                            <span class="icon-star"></span>
-                            <span class="icon-star"></span>
-                            <span class="icon-star"></span>
-                            <span class="icon-star"></span>
-                            <span class="icon-star"></span>
-                        </p>
-                    </div>
-                    <div class="content-area">
-                        <span class="status">
-                            <input type="checkbox">Finished
-                        </span>
-                        <textarea placeholder="Write a note..." class="content">
-                            {{description}}
-                        </textarea>
-                        <button class="edit"><a>Edit</a></button>
-                    </div>
+            <nav class="clearfix">
+                <span id="finishDateSort" onclick="">By finish Date</span>
+    			<span id="createdDateSort">By created Date</span>
+    			<span id="importanceSort">By Importance</span>
+    			<span id="finishedSort">Show finished</span>
+               
+                <div class="color-select-area">
+                    <select name="" id=""> 
+                        <option value="1">
+                            Choose color...
+                        </option>
+                        <option value="2">
+                            White & Black
+                        </option>
+                        <option value="3">
+                            Pink & Grey
+                        </option>
+                    </select>
+                    <span class="icon-chevron-down"></span>
                 </div>
-            {{/each}}
-        </script>
-    </div>
+            </nav>
+        </header>
 
-    <script src="js/handlebars-v3.0.3.js"></script>
-    <script src="js/jquery-1.11.3.min.js"></script>
-    <script src="js/notes.js"></script> 
-</body>
+        <div id="notes">
+            <script id="entry-template" type="text/x-handlebars-template">
+                {{#each this}}
+                    <div class="note">
+                        <div class="header">
+                            <p class="date">
+                                {{finishDate}}
+                            </p>
+                            
+                            <p class="title">
+                                {{title}} 
+                                <span>Created on {{createdDate}}</span>
+                            </p>
+
+                            <p class="importance">
+                                {{#for importance}}
+                                    <span class="icon-star"></span>
+                                {{/for}}
+                            </p>
+                        </div>
+                        <div class="content-area">
+                            <label>
+                                <input class="finished" type="checkbox" {{#if finshed}}checked{{/if}}>
+                                Finished
+                            </label>
+
+                            <p class="content">
+                                {{description}}
+                            </p>
+                            <button class="edit">Edit</button>
+                        </div>
+                    </div>
+                {{/each}}
+            </script>
+        </div>
+
+        <script src="js/handlebars-v3.0.3.js"></script>
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/notes.js"></script> 
+    </body>
 </html>
