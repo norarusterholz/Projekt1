@@ -60,13 +60,17 @@ header nav .color-select-area {
 }
 
 .note .header .date,
-.note .content-area .status {
-    width: 24%;
+.note .content-area .finished {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .note .header .title,
-.note .content-area textarea {
-    width: 62%;
+.note .content-area p {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
 }
 
 .note .header .importance,
@@ -86,14 +90,12 @@ header nav .color-select-area {
     display: flex;
 }
 
-.note .content-area .status input {
+.note .content-area .finished input {
     margin-right: 6px;
 }
 
-.note .content-area textarea {
+.note .content-area p {
     height: 120px;
-
-    border: 1px solid #bfbfbf;
 
     padding: 12px;
 }
