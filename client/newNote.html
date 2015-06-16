@@ -1,64 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create a new Note</title>
-    <link rel="stylesheet" href="css/resets.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/newNote.css">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create a new Note</title>
+        <link rel="stylesheet" href="css/resets.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/newNote.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
+        <fieldset>
+            <div>
+                <label>Title
+            <input type="text" id="title" placeholder="Give your note a title">
+                </label>
+            </div>
+        </fieldset>
 
+        <fieldset>
+            <div>
+                <label>Description
+            <textarea id="description" placeholder="What do you need to do?"></textarea>
+                </label>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <div class="rating">
+                <legend>Importance</legend>
+                
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5" title="Should be finished 5 days ago"></label>
+                
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="Hurry!!!"></label>
+                
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="Maybe I should start with that one"></label>
+                
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="There is still time"></label>
+                
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="I can do this when I'm old"></label>
+            </div>
+        </fieldset>
 
-    <fieldset>
-    <div>
-        <label>Title
-    <input type="text" id="title" placeholder="Give your note a title">
-        </label>
-    </div>
-    </fieldset>
+        <fieldset>
+            <div>
+                <label>
+                    Finish date
+                    <input type="date" id="finishDate">
+                </label>
+            </div>
+        </fieldset>
 
-    <fieldset>
-    <div>
-        <label>Description
-    <textarea id="description" placeholder="What do you need to do?"></textarea>
-        </label>
-    </div>
-    </fieldset>
+        <fieldset>
+            <div>
+                <input type="button" id="saveButton" value="Save">
+            </div>
 
-    <fieldset>
-        <div class="rating">
-        <legend>Importance</legend>
-        <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="Should be finished 5 days ago">5 stars</label>
-        <input type="radio" id="star4" name="rating" value="4"><label for="star4" title="Hurry!!!">4 stars</label>
-        <input type="radio" id="star3" name="rating" value="3"><label for="star3" title="Maybe I should start with that one">3 stars</label>
-        <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="There is still time">2 stars</label>
-        <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="I can do this when I'm old">1 star</label>
-        </div>
-    </fieldset>
+            <div>
+                <input type="button" id="cancelButton" value="Cancel">
+            </div>
+        </fieldset>
 
-    <fieldset>
-        <div>
-            <label>Finish date
-            <input type="date" id="finishDate">
-            </label>
-        </div>
-    </fieldset>
+    <script src="js/newNote.js"></script>
 
-    <fieldset>
-        <div>
-            <input type="button" id="saveButton" value="Save">
-        </div>
-
-        <div>
-            <input type="button" id="cancelButton" value="Cancel">
-        </div>
-    </fieldset>
-
-<script src="js/newNote.js"></script>
-
-</body>
-
+    </body>
 </html>
