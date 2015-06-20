@@ -2,7 +2,7 @@ function starRating() {
     for (i = 0; i < document.getElementsByName('rating').length; i++) {
         if(document.getElementsByName('rating')[i].checked == true) {
             return document.getElementsByName('rating')[i].value;
-        } else {
+        } else if (document.getElementsByName('rating')[i].checked == false){
             return 0;
         }
     }
