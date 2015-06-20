@@ -57,7 +57,6 @@ $(".finished").click(function(e){
 	var index = $target.closest(".note").index();
 
 	notes[index].finshed = $target.prop("checked");
-	console.log("checked"),
 
 	localStorage.setItem("notes", JSON.stringify(notes));
 });
