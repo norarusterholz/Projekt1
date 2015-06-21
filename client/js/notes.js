@@ -7,6 +7,14 @@ var renderNotes = function() {
 	$notes.html(template(notes));
 };
 
+$("#colorSelectArea").change(function() {
+  if (this.value == 2) {
+  	$(".customStyle").attr("href", "css/beach.css");
+  } else if (this.value == 3) {
+  	$(".customStyle").attr("href", "css/strongGirl.css");
+  }
+});
+
 Handlebars.registerHelper("for", function(stars, options) {
 	var html = "";
 
