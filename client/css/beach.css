@@ -1,0 +1,91 @@
+body {
+	color: #1d2939;
+}
+
+a {
+	color: #ee6456;
+}
+
+a:hover{
+	color: #1caf9a;
+}
+
+h1 {
+	color: #1d2939;
+}
+
+header nav >span {
+	color: #ee6456;
+	border-right: 1px #1caf9a dotted;
+}
+
+header nav >span:first-of-type,
+header nav >span:first-child {
+	border-left: 1px #1caf9a dotted;	
+}
+
+header nav span select {
+	color: #ee6456;
+} 
+
+header nav span:hover,
+header nav span:hover select {
+	background-color: #1d2939;
+	color: #d1dc48;
+}
+
+header nav span:hover a {
+	color: #d1dc48;
+}
+
+button {
+	color: #1d2939;
+    background-color: #d1dc48;
+}
+
+button:hover {
+    background-color: #1d2939;
+    color:  #d1dc48;
+}
+
+.note .header .status input[type="checkbox"]:checked + .icon-check-box-outlined:before {
+    color: #1caf9a;
+}
+
+.note .header .date {
+    color: #1caf9a;
+}
+
+.note .header .title {
+	color: #1d2939;
+}
+
+.note .header .importance .icon-star {
+	color: #d1dc48;
+}
+
+.note {
+    color: #777;
+    background: #f6f6f3;
+
+    box-shadow: 0px 3px 15px hsla(0,0%,0%,.08);
+    position: relative;
+    border: 1px dotted #1caf9a;
+    background-image: -webkit-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -webkit-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -webkit-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(171,72%,40%,.1) 95%,
+                      hsla(171,72%,40%,.1) 100%);
+    background-image: -moz-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -moz-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -moz-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(171,72%,40%,.1) 95%, hsla(171,72%,40%,.1) 100%);
+    background-image: radial-gradient(#d6d5d6 30%, transparent 20%),
+                      radial-gradient(#cfcfc3 38%, transparent 24%),
+                      linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(171,72%,40%,.1) 95%, hsla(171,72%,40%,.1) 100%);
+    background-position: 4px 1px, 4px 0px, 50% 0px;
+    background-repeat: repeat-y,  repeat-y, repeat;
+    background-size: 30px 30px, 30px 30px, 30px 30px;
+    padding-left: 42px;
+}
