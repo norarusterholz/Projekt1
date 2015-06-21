@@ -1,39 +1,41 @@
 body {
-    font-family: "Open Sans";
-    font-size: 18px;
-
     max-width: 978px;
 
     margin: 0 auto;
     padding: 36px;
 }
 
+* {
+    font-family: "Open Sans";
+    font-size: 18px;
+}
+
 fieldset {
     border: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+label,
+legend {
+    font-family: "Open Sans Bold";
+    
+    display: block;
+    margin-bottom: 6px;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    width: 640px;
+
+    padding: 4px 6px;
 }
 
 textarea {
-    width: 600px;
     height: 200px;
-    float: right;
-
-    font-family: "Open Sans";
-    font-size: 18px;
-
-    margin-right: 400px;
-}
-
-input {
-    width: 600px;
-    float: right;
-
-    font-family: "Open Sans";
-    font-size: 18px;
-
-    margin-right: 400px;
-    margin-top: 10px;
 }
 
 input[type="radio"] {
@@ -48,22 +50,24 @@ input[type="button"] {
 
     border: none;
 
-    box-shadow: 2px 6px 6px #555;
+    box-shadow: 2px 6px 6px #999;
 
     padding: 6px 18px;
     margin-bottom: 12px;
-
 }
 
-#finishDate {
-    width: 200px;
-    margin-right: 800px;
-}
-
+#finishDate,
+#saveButton,
 #cancelButton {
-    width: 200px;
+    width: 262px;
 }
 
+fieldset:last-child, 
+fieldset:last-of-type {
+    display: flex;
+}
+
+/*starRating*/
 .rating {
     float: left;
 }
@@ -112,7 +116,7 @@ input[type="button"] {
 }
 
 .rating > label:active {
-    position:relative;
-    top:2px;
-    left:2px;
+    position: relative;
+    top: 2px;
+    left: 2px;
 }

@@ -5,25 +5,20 @@
         <title>Create a new Note</title>
         <link rel="stylesheet" href="css/resets.css">
         <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="css/newNote.css">
-
+        <link rel="stylesheet" href="" class="customStyles">
     </head>
 
     <body>
         <fieldset>
-            <div>
-                <label>Title
+            <label>Title</label>
             <input type="text" id="title" placeholder="Give your note a title">
-                </label>
-            </div>
         </fieldset>
 
         <fieldset>
-            <div>
-                <label>Description
+            <label>Description</label>
             <textarea id="description" placeholder="What do you need to do?"></textarea>
-                </label>
-            </div>
         </fieldset>
         
         <fieldset>
@@ -48,23 +43,12 @@
         </fieldset>
 
         <fieldset>
-            <div>
-                <label>
-                    Finish date
-                    <input type="date" id="finishDate">
-                </label>
-            </div>
+            <label>Finish date</label>
+            <input type="date" id="finishDate">
         </fieldset>
 
-        <fieldset>
-            <div>
-                <input type="button" id="saveButton" value="Save">
-            </div>
-
-            <div>
-                <input type="button" id="cancelButton" value="Cancel">
-            </div>
-        </fieldset>
+        <button id="saveButton" value="Save">Save</button>
+        <button id="cancelButton" value="Cancel">Cancel</button>
 
     <script src="js/newNote.js"></script>
 

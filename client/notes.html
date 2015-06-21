@@ -4,38 +4,47 @@
         <meta charset="UTF-8">
         <title>notes</title>
 
-        <link rel="stylesheet" href="CSS/fonts.css">
-        <link rel="stylesheet" href="CSS/resets.css">
-        <link rel="stylesheet" href="CSS/index.css">
-        <link rel="stylesheet" href="CSS/notes.css">
+        <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/resets.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/notes.css">
+        <link rel="stylesheet" href="" class="customStyle">
     </head>
     <body>
-        <header>
-            <button onclick="window.location.href='newNote.html'">
+        <h1>
+            Note it!
+        </h1>
+
+        <h2>
+            <a onclick="window.location.href='newNote.html'">
                 <span class="icon-new-message"></span>
                     Create a new Note
-            </button>
-
-            <nav class="clearfix">
-                <span id="finishDateSort" onclick="">By finish Date</span>
-    			<span id="createdDateSort">By created Date</span>
-    			<span id="importanceSort">By Importance</span>
-    			<span id="finishedSort">Show finished</span>
+            </a>
+        </h2>
+        
+        <header>
+            <nav>
+                <span id="finishDateSort">By <br> finish Date</span>
+    			<span id="createdDateSort">By <br> created Date</span>
+    			<span id="importanceSort">By <br> Importance</span>
+    			<span id="finishedSort">Show <br> finished</span>
                
-                <div class="color-select-area">
-                    <select name="" id=""> 
+                <span>
+                    <select id="colorSelectArea"> 
                         <option value="1">
-                            Choose color...
+                            Styles
                         </option>
                         <option value="2">
-                            White & Black
+                            Beach
                         </option>
                         <option value="3">
-                            Pink & Grey
+                            Strong girl
                         </option>
                     </select>
                     <span class="icon-chevron-down"></span>
-                </div>
+                </span>
             </nav>
         </header>
 
@@ -43,32 +52,38 @@
             <script id="entry-template" type="text/x-handlebars-template">
                 {{#each this}}
                     <div class="note">
+                        <span class="icon-pin"></span>
                         <div class="header">
-                            <p class="date">
-                                {{finishDate}}
+                            <p>
+                                <span class="date">
+                                    By {{finishDate}}
+                                </span>
+
+                                <span class="status">
+                                    <label>
+                                        <input class="finished" type="checkbox" {{#if finshed}}checked{{/if}}>
+                                        Finished
+                                        <span class="icon-check-box-outlined"></span>
+                                    </label>
+                                </span>
+
+                                <span class="importance">
+                                    {{#for importance}}
+                                        <span class="icon-star"></span>
+                                    {{/for}}
+                                </span>
                             </p>
-                            
+                            <p class="createdDate">Created on {{createdDate}}</p>
+
                             <p class="title">
                                 {{title}} 
-                                <span>Created on {{createdDate}}</span>
-                            </p>
-
-                            <p class="importance">
-                                {{#for importance}}
-                                    <span class="icon-star"></span>
-                                {{/for}}
                             </p>
                         </div>
                         <div class="content-area">
-                            <label>
-                                <input class="finished" type="checkbox" {{#if finshed}}checked{{/if}}>
-                                Finished
-                            </label>
-
                             <p class="content">
                                 {{description}}
                             </p>
-                            <button class="edit">Edit</button>
+                            <button class="edit"><span class="icon-edit"></span>Edit</button>
                         </div>
                     </div>
                 {{/each}}

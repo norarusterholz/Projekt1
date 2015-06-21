@@ -1,76 +1,98 @@
 /*header*/
+* {
+    font-family: "Open Sans";
+}
+
+h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-align: center;
+}
+
+h2 {
+    font-family:"Gloria Hallelujah", cursive;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
 header {
     margin-bottom: 24px;
 }
 
 header nav {
     display: flex;
+    flex-wrap: wrap;
+
+    font-family: "Open Sans Bold";
+    font-size: 12px;
 
     margin-top: 12px;
 }
 
-header nav span {
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-
+header nav > span {
+    max-width: 112px;
     padding: 6px 12px;
 
-    font-family: "Playfair Display Bold";
-}
-
-header nav span:first-of-type,
-header nav span:first-child {
-    border-left: 1px solid #ccc;
+    flex: 1;
 }
 
 header nav span:hover {
-	color: crimson;
-	cursor: pointer;
+    cursor: pointer;
 }
 
-header nav .color-select-area {
-    height: 36px;
-    padding: 6px 12px;
-
-    margin-left: auto;
+header nav .color-select-area select {
+    font-family: "Open Sans Bold";
+    font-size: 12px;
 }
 
 /*notes*/
+#notes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
 .note {
-    background-color: #dfdfdf;
-    
     box-shadow: 4px 4px 4px #aaa;
 
     border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 
-    padding: 12px;
+    padding: 12px 12px 24px 0;
+    margin-right: 24px;
     margin-bottom: 18px;
+
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+
+    min-width: 320px;
+    max-width: 640px;
 }
 
 .note .header {
-    display: flex;
-
     border-bottom: 1px solid #bfbfbf ;
 
     padding-bottom: 6px;
     margin-bottom: 12px;
+
+    font-family: "Open Sans Light";
 }
 
-.note .header .date,
-.note .content-area .finished {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+.note .header p:not(last-of-type),
+.note .header p:not(last-of-type) {
+    display: flex;
+
+    font-size: 16px;
+
+    margin-bottom: 6px;
 }
 
-.note .header .title,
-.note .content-area p {
-    -webkit-flex: 2;
-    -ms-flex: 2;
-    flex: 2;
+.note .header .date {
+    margin-right: 4px;
 }
 
 .note .header .importance,
@@ -78,16 +100,17 @@ header nav .color-select-area {
     margin-left: auto;
 }
 
-.note .header .date {
-    color: crimson;
+.note .header .status input {
+    display: none;
+}
+
+.note .header .status input[type="checkbox"]:checked + .icon-check-box-outlined:before {
+    content: "\28";
 }
 
 .note .header .title {
     font-family: "Open Sans Bold";
-}
-
-.note .content-area {
-    display: flex;
+    margin-bottom: 12px;
 }
 
 .note .content-area .finished input {
@@ -95,7 +118,6 @@ header nav .color-select-area {
 }
 
 .note .content-area p {
-    height: 120px;
-
-    padding: 12px;
+    font-family: "Gloria Hallelujah", cursive;
+    margin-bottom: 12px;
 }

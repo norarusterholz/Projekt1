@@ -1,18 +1,14 @@
 body {
 	font-size: 18px;
 
-	max-width: 978px;
+	max-width: 1024px;
 
 	margin: 0 auto;
-	padding: 36px;
+	padding: 12px;
 }
 
 a {
 	text-decoration: none;
-}
-
-a:hover {
-	color: crimson;
 }
 
 select {
@@ -27,30 +23,13 @@ select {
 button {
 	height: 36px;
 
-    background-color: dimgray;
-
     border: none;
 
-    box-shadow: 2px 6px 6px #555;
-	
-	padding: 6px 18px;
-	margin-bottom: 12px;
-}
-
-
-button:hover {
-	color: white;
-	background-color: crimson;
-}
-
-button a {
-    color: white;
-
+    box-shadow: 2px 3px 3px #999;
+    
     font-family: "Open Sans Light";
-}
-
-button a:hover {
-	color: white;
+	
+	padding: 8px;
 }
 
 button,
@@ -58,4 +37,10 @@ textarea {
 	border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+
+    font-size: 14px;
+}
+
+button:hover {
+	cursor: pointer;
 }
