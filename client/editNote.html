@@ -11,45 +11,50 @@
     </head>
 
     <body>
-        <fieldset>
-            <label>Title</label>
-            <input type="text" id="title" placeholder="Give your note a title">
-        </fieldset>
+        <div id="editor">
+            <script id="entry-template" type="text/x-handlebars-template">
+                <fieldset>
+                    <label>Title</label>
+                    <input type="text" id="title" value="{{title}}" placeholder="Give your note a title"> 
+                </fieldset>
 
-        <fieldset>
-            <label>Description</label>
-            <textarea id="description" placeholder="What do you need to do?"></textarea>
-        </fieldset>
-        
-        <fieldset>
-            <div class="rating">
-                <legend>Importance</legend>
+                <fieldset>
+                    <label>Description</label>
+                    <textarea id="description" placeholder="What do you need to do?">{{description}}</textarea>
+                </fieldset>
                 
-                <input type="radio" id="star5" name="rating" value="5">
-                <label for="star5" title="Should be finished 5 days ago"></label>
-                
-                <input type="radio" id="star4" name="rating" value="4">
-                <label for="star4" title="Hurry!!!"></label>
-                
-                <input type="radio" id="star3" name="rating" value="3">
-                <label for="star3" title="Maybe I should start with that one"></label>
-                
-                <input type="radio" id="star2" name="rating" value="2">
-                <label for="star2" title="There is still time"></label>
-                
-                <input type="radio" id="star1" name="rating" value="1">
-                <label for="star1" title="I can do this when I'm old"></label>
-            </div>
-        </fieldset>
+                <fieldset>
+                    <div class="rating">
+                        <legend>Importance</legend>
+                    
+                            <input type="radio" id="star5" name="rating" value="5" {{{setChecked 5 importance}}}>
+                            <label for="star5" title="Should be finished 5 days ago"></label>
+                            
+                            <input type="radio" id="star4" name="rating" value="4" {{{setChecked 4 importance}}}>
+                            <label for="star4" title="Hurry!!!"></label>
+                            
+                            <input type="radio" id="star3" name="rating" value="3" {{{setChecked 3 importance}}}>
+                            <label for="star3" title="Maybe I should start with that one" ></label>
+                            
+                            <input type="radio" id="star2" name="rating" value="2" {{{setChecked 2 importance}}}>
+                            <label for="star2" title="There is still time"></label>
+                            
+                            <input type="radio" id="star1" name="rating" value="1" {{{setChecked 1 importance}}}>
+                            <label for="star1" title="I can do this when I'm old"></label>
+                    </div>
+                </fieldset>
 
-        <fieldset>
-            <label>Finish date</label>
-            <input type="date" id="finishDate">
-        </fieldset>
-
+                <fieldset>
+                    <label>Finish date</label>
+                    <input type="date" id="finishDate" value="{{finishDate}}">
+                </fieldset>
+            </script>
+        </div>
         <button id="saveButton" value="Save">Save</button>
         <button id="cancelButton" value="Cancel">Cancel</button>
 
+    <script src="js/handlebars-v3.0.3.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/editNote.js"></script>
 
     </body>
