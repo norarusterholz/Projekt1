@@ -69,8 +69,8 @@ header nav .color-select-area select {
     -ms-flex: 1;
     flex: 1;
 
-    min-width: 320px;
-    max-width: 640px;
+    min-width: 280px;
+    max-width: 320px;
 }
 
 .note .header {
