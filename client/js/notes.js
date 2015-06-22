@@ -51,8 +51,8 @@ $("#createdDateSort").click(function(){
 	renderNotes();
 });
 
-$("#finishedSort").click(function(){
-	notes.sort(function(a) {
+$("#finishedSort").click(function() {
+	notes = notes.filter(function(a) {
 		return a.finished === true; 
 	});
 
@@ -66,7 +66,7 @@ $(".finished").click(function(e){
 
 	var index = $target.closest(".note").index();
 
-	notes[index].finshed = $target.prop("checked");
+	notes[index].finished = $target.prop("checked");
 
 	localStorage.setItem("notes", JSON.stringify(notes));
 });
