@@ -9,10 +9,12 @@ body {
 
 a {
 	text-decoration: none;
+    cursor: pointer;
 }
 
 select {
 	border: none;
+    background-color: #fff;
 
 	-webkit-appearance:none;
     -moz-appearance:none;
