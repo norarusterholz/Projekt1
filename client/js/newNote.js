@@ -1,11 +1,12 @@
-function starRating() {
-    for (i = 0; i < document.getElementsByName('rating').length; i++) {
-        if(document.getElementsByName('rating')[i].checked == true) {
-            return document.getElementsByName('rating')[i].value;
-        } else if (document.getElementsByName('rating')[i].checked == false){
-            return 0;
+function getStarRating() {
+    for (var i = 0; i < document.getElementsByName('rating').length; i++) {
+        if (document.getElementsByName('rating')[i].checked == true) {
+            return parseInt(document.getElementsByName('rating')[i].value);
         }
     }
+
+    // No stars were selected
+    return 0;
 }
 
 document.getElementById("saveButton").onclick = function() {
@@ -15,7 +16,7 @@ document.getElementById("saveButton").onclick = function() {
         title: document.getElementById("title").value,
         description: document.getElementById("description").value,
         finishDate: document.getElementById("finishDate").value,
-        importance: starRating(),
+        importance: getStarRating(),
         createdDate: new Date().toDateString(),
         finished: false
     };
