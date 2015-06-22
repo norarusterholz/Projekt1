@@ -8,10 +8,12 @@ var renderNotes = function() {
 };
 
 $("#colorSelectArea").change(function() {
-  if (this.value == 2) {
-  	$(".customStyle").attr("href", "css/beach.css");
+  if (this.value == 1) {
+  	$(".thema").attr("href", "css/beach.css");
+  } else if (this.value == 2) {
+  	$(".thema").attr("href", "css/iceCream.css");
   } else if (this.value == 3) {
-  	$(".customStyle").attr("href", "css/strongGirl.css");
+  	$(".thema").attr("href", "css/strongGirl.css");
   }
 });
 

@@ -1,0 +1,91 @@
+body {
+    color: #829dc8;
+}
+
+a {
+    color: #829dc8;
+}
+
+a:hover{
+    color: #f3d2dd;
+}
+
+h1 {
+    color: #f3d2dd;
+}
+
+header nav >span {
+    color: #829dc8;
+    border-right: 1px #f3d2dd dotted;
+}
+
+header nav >span:first-of-type,
+header nav >span:first-child {
+    border-left: 1px #f3d2dd dotted;    
+}
+
+header nav span select {
+    color: #829dc8;
+} 
+
+header nav span:hover,
+header nav span:hover select {
+    background-color: #829dc8;
+    color: #ded4ca;
+}
+
+header nav span:hover a {
+    color: #ded4ca;
+}
+
+button {
+    color: #829dc8;
+    background-color: #ded4ca;
+}
+
+button:hover {
+    background-color: #829dc8;
+    color:  #ded4ca;
+}
+
+.note {
+    color: #777;
+    background: #c9eef6;
+
+    box-shadow: 0px 3px 15px hsla(0,0%,0%,.08);
+    position: relative;
+    border: 1px dotted #f3d2dd;
+    background-image: -webkit-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -webkit-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -webkit-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(217,39%,65%,.1) 95%,
+                      hsla(217,39%,65%,.1) 100%);
+    background-image: -moz-radial-gradient(#d6d5d6 30%, transparent 20%),
+                      -moz-radial-gradient(#cfcfc3 38%, transparent 24%),
+                      -moz-linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(217,39%,65%,.1) 95%, hsla(217,39%,65%,.1) 100%);
+    background-image: radial-gradient(#d6d5d6 30%, transparent 20%),
+                      radial-gradient(#cfcfc3 38%, transparent 24%),
+                      linear-gradient(top, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,0) 95%,
+                      hsla(217,39%,65%,.1) 95%, hsla(217,39%,65%,.1) 100%);
+    background-position: 4px 1px, 4px 0px, 50% 0px;
+    background-repeat: repeat-y,  repeat-y, repeat;
+    background-size: 30px 30px, 30px 30px, 30px 30px;
+    padding-left: 42px;
+}
+
+.note .header .status input[type="checkbox"]:checked + .icon-check-box-outlined:before {
+    color: #f3d2dd;
+}
+
+.note .header .date {
+    color: #f3d2dd;
+}
+
+.note .header .title {
+    color: #829dc8;
+}
+
+.note .header .importance .icon-star {
+    color: #ded4ca;
+}
