@@ -53,8 +53,15 @@
             <script id="entry-template" type="text/x-handlebars-template">
                 {{#each this}}
                     <div class="note">
-                        <span class="icon-pin"></span>
                         <div class="header">
+                            <p>
+                                <span class="icon-pin"></span>
+                                <span class="importance">
+                                    {{#for importance}}
+                                        <span class="icon-star"></span>
+                                    {{/for}}
+                                </span>
+                            </p>
                             <p>
                                 <span class="date">
                                     By {{finishDate}}
@@ -66,12 +73,6 @@
                                         Finished
                                         <span class="icon-check-box-outlined"></span>
                                     </label>
-                                </span>
-
-                                <span class="importance">
-                                    {{#for importance}}
-                                        <span class="icon-star"></span>
-                                    {{/for}}
                                 </span>
                             </p>
                             <p class="createdDate">Created on {{createdDate}}</p>
