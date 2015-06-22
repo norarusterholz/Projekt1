@@ -9,10 +9,17 @@ function getStarRating() {
     return 0;
 }
 
+function generateId(notes) {
+    return Math.max.apply(this, notes.map(function(a) {
+        return a.id;
+    })) + 1;
+}
+
 document.getElementById("saveButton").onclick = function() {
     var notes = JSON.parse(localStorage.getItem("notes")) || [];
 
     var note = {
+        id: generateId(notes),
         title: document.getElementById("title").value,
         description: document.getElementById("description").value,
         finishDate: document.getElementById("finishDate").value,
