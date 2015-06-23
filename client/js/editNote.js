@@ -13,9 +13,13 @@ function getStarRating() {
 }
 
 function generateId() {
-    return Math.max.apply(this, notes.map(function(a) {
-        return a.id;
-    })) + 1;
+    if (notes.length) {
+        return Math.max.apply(this, notes.map(function(a) {
+            return a.id;
+        })) + 1;
+    }
+
+    return 0;
 }
 
 document.getElementById("cancelButton").onclick = function () {
