@@ -1,6 +1,14 @@
 var source = $("#entry-template").html();
 var template = Handlebars.compile(source);
 
+Handlebars.registerHelper("setChecked", function (value, importance) {
+    if ( value == importance ) {
+        return "checked"
+    } else {
+        return "";
+    }
+});
+
 function getStarRating() {
     for (var i = 0; i < document.getElementsByName('rating').length; i++) {
         if (document.getElementsByName('rating')[i].checked == true) {
@@ -45,13 +53,5 @@ document.getElementById("saveButton").onclick = function() {
 
 var notes = JSON.parse(localStorage.getItem("notes")) || [];
 var id = parseInt(location.href.split("?id=")[1]);
-
-Handlebars.registerHelper ("setChecked", function (value, importance) {
-    if ( value == importance ) {
-       return "checked"
-    } else {
-       return "";
-    }
- });
 
 $("#editor").html(template(notes.filter(function(item) { return item.id === id; })[0]));
