@@ -10,6 +10,21 @@ body {
     font-size: 18px;
 }
 
+h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    font-family:"Gloria Hallelujah", cursive;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
 fieldset {
     border: 0;
     margin-bottom: 24px;
