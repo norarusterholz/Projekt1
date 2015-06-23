@@ -27,42 +27,35 @@ Handlebars.registerHelper("for", function(stars, options) {
 	return new Handlebars.SafeString(html);
 });
 
-$("#finishDateSort").click(function(){
+function sortByAndRender(key, isDate){
 	notes.sort(function(a, b) {
-		return new Date(a.finishDate) > new Date(b.finishDate);
+		if (isDate) {
+			return new Date(a[key]) > new Date(b[key]);
+		}
+
+		return a[key] < b[key];
 	});
 
-	$("#finishDateSort span[class*='icon-']").toggle();
-
+	$("#" + key + "Sort span[class*='icon-']").toggle();
 	renderNotes();
+};
+
+$("#finishDateSort").click(function(){
+	sortByAndRender("finishDate", true);
 });
 
 $("#importanceSort").click(function(){
-	notes.sort(function(a, b) {
-		return a.importance > b.importance;
-	});
-
-	$("#importanceSort span[class*='icon-']").toggle();
-
-	renderNotes();
+	sortByAndRender("importance");
 });
 
 $("#createdDateSort").click(function(){
-	notes.sort(function(a, b) {
-		return a.createdDate < b.createdDate;
-	});
-
-	$("#createdDateSort span[class*='icon-']").toggle();
-
-	renderNotes();
+	sortByAndRender("createdDate", true);
 });
 
 $("#finishedSort").click(function() {
 	notes = notes.filter(function(a) {
 		return a.finished === true; 
 	});
-
-	$("#finishedSort span[class*='icon-']").toggle();
 
 	renderNotes();
 });
