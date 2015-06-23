@@ -32,6 +32,8 @@ $("#finishDateSort").click(function(){
 		return new Date(a.finishDate) > new Date(b.finishDate);
 	});
 
+	$("#finishDateSort span[class*='icon-']").toggle();
+
 	renderNotes();
 });
 
@@ -39,6 +41,8 @@ $("#importanceSort").click(function(){
 	notes.sort(function(a, b) {
 		return a.importance > b.importance;
 	});
+
+	$("#importanceSort span[class*='icon-']").toggle();
 
 	renderNotes();
 });
@@ -48,6 +52,8 @@ $("#createdDateSort").click(function(){
 		return a.createdDate < b.createdDate;
 	});
 
+	$("#createdDateSort span[class*='icon-']").toggle();
+
 	renderNotes();
 });
 
@@ -55,6 +61,8 @@ $("#finishedSort").click(function() {
 	notes = notes.filter(function(a) {
 		return a.finished === true; 
 	});
+
+	$("#finishedSort span[class*='icon-']").toggle();
 
 	renderNotes();
 });

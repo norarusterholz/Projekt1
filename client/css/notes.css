@@ -26,13 +26,13 @@ header nav {
     flex-wrap: wrap;
 
     font-family: "Open Sans Bold";
-    font-size: 12px;
+    font-size: 14px;
 
     margin-top: 12px;
 }
 
 header nav > span {
-    max-width: 112px;
+    max-width: 136px;
     padding: 6px 12px;
 
     flex: 1;
@@ -44,7 +44,13 @@ header nav span:hover {
 
 header nav .color-select-area select {
     font-family: "Open Sans Bold";
-    font-size: 12px;
+    font-size: 16px;
+}
+
+header nav [class*='icon-'] {
+    font-size: 18px;
+    line-height: 12px;
+    vertical-align: sub;
 }
 
 /*notes*/
