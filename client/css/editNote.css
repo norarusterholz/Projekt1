@@ -1,13 +1,5 @@
-body {
-    max-width: 978px;
-
-    margin: 0 auto;
-    padding: 36px;
-}
-
 * {
     font-family: "Open Sans";
-    font-size: 18px;
 }
 
 h1 {
@@ -23,6 +15,10 @@ h2 {
     text-align: center;
 
     margin: 0 auto;
+}
+
+input {
+    font-size: 14px;
 }
 
 fieldset {
@@ -47,6 +43,8 @@ textarea {
     width: 640px;
 
     padding: 4px 6px;
+
+    font-size: 14px;
 }
 
 textarea {
