@@ -1,13 +1,24 @@
-body {
-    max-width: 978px;
-
-    margin: 0 auto;
-    padding: 36px;
-}
-
 * {
     font-family: "Open Sans";
+}
+
+h1 {
+    font-family: "Gloria Hallelujah", cursive;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    font-family:"Gloria Hallelujah", cursive;
     font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+input {
+    font-size: 14px;
 }
 
 fieldset {
@@ -32,6 +43,8 @@ textarea {
     width: 640px;
 
     padding: 4px 6px;
+
+    font-size: 14px;
 }
 
 textarea {
