@@ -46,20 +46,18 @@ function generateId() {
     return 1;
 }
 
-$("#cancelButton").click(function () {
-    location.href = "notes.html";
-});
+function Note() {
+    this.id = generateId();
+    this.title = $("#title").val();
+    this.description = $("#description").val();
+    this.finishDate = $("#finishDate").val();
+    this.importance = getStarRating();
+    this.createdDate = new Date().toDateString();
+    this.finished = false;
+};
 
 $("#saveButton").click(function() {
-    var note = {
-        id: generateId(),
-        title: $("#title").val(),
-        description: $("#description").val(),
-        finishDate: $("#finishDate").val(),
-        importance: getStarRating(),
-        createdDate: new Date().toDateString(),
-        finished: false
-    };
+    var note = new Note();
 
     if (id) {
         notes[getNoteAndIndexById(id).index] = note;
@@ -68,6 +66,10 @@ $("#saveButton").click(function() {
     }
 
     localStorage.setItem("notes", JSON.stringify(notes));
+    location.href = "notes.html";
+});
+
+$("#cancelButton").click(function () {
     location.href = "notes.html";
 });
 
