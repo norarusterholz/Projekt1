@@ -71,7 +71,3 @@ $(".finished").click(function(e){
 
 	localStorage.setItem("notes", JSON.stringify(notes));
 });
-
-$(".icon-cross").click(function(){
-	location.reload();
- });

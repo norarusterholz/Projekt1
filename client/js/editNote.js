@@ -46,16 +46,16 @@ function generateId() {
     return 1;
 }
 
-document.getElementById("cancelButton").onclick = function () {
+$("#cancelButton").click(function () {
     location.href = "notes.html";
-};
+});
 
-document.getElementById("saveButton").onclick = function() {
+$("#saveButton").click(function() {
     var note = {
         id: generateId(),
-        title: document.getElementById("title").value,
-        description: document.getElementById("description").value,
-        finishDate: document.getElementById("finishDate").value,
+        title: $("#title").val(),
+        description: $("#description").val(),
+        finishDate: $("#finishDate").val(),
         importance: getStarRating(),
         createdDate: new Date().toDateString(),
         finished: false
@@ -69,7 +69,7 @@ document.getElementById("saveButton").onclick = function() {
 
     localStorage.setItem("notes", JSON.stringify(notes));
     location.href = "notes.html";
-};
+});
 
 var notes = JSON.parse(localStorage.getItem("notes")) || [];
 var id = parseInt(location.href.split("?id=")[1]);
