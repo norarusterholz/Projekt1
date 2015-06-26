@@ -9,11 +9,11 @@ var renderNotes = function() {
 
 $("#colorSelectArea").change(function() {
   if (this.value == 1) {
-  	$(".thema").attr("href", "css/beach.css");
+    $(".thema").attr("href", "css/beach.css");
   } else if (this.value == 2) {
-  	$(".thema").attr("href", "css/iceCream.css");
+    $(".thema").attr("href", "css/iceCream.css");
   } else if (this.value == 3) {
-  	$(".thema").attr("href", "css/strongGirl.css");
+    $(".thema").attr("href", "css/strongGirl.css");
   }
 });
 
@@ -37,6 +37,7 @@ function sortByAndRender(key, isDate){
 	});
 
 	$("#" + key + "Sort span[class*='icon-']").toggle();
+
 	renderNotes();
 };
 
@@ -57,17 +58,23 @@ $("#finishedSort").click(function() {
 		return a.finished === true; 
 	});
 
+    $("#finishedSort span[class*='icon-']").toggle();
+
 	renderNotes();
 });
 
+$(".icon-cross").click(function(){
+    location.reload();
+ });
+
 renderNotes();
 
-$(".finished").click(function(e){
-	$target = $(e.target);
+$(".finished").click(function(e){ 
+    $target = $(e.target);
 
-	var index = $target.closest(".note").index();
+    var index = $target.closest(".note").index();
 
-	notes[index].finished = $target.prop("checked");
+    notes[index].finished = $target.prop("checked");
 
-	localStorage.setItem("notes", JSON.stringify(notes));
+    localStorage.setItem("notes", JSON.stringify(notes));
 });
