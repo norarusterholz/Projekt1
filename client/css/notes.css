@@ -57,9 +57,12 @@ header nav [class*='icon-'] {
     right: 0;
     bottom: 0;
 
-    padding-top: 24px;
     padding-right: 8px;
     padding-bottom: 12px;
+}
+
+header nav [class*='icon-']:not(:last-child) {
+    padding-top: 24px;
     padding-left: 90px;
 }
 
